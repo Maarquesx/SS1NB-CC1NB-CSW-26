@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04</title>
+</head>
+
+<body>
+    <h1 style="background-color: red;">Principais formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    <p>Na frase temos uma <b>parte do texto em negrito</b> usando a tag B (Não semântica)</p>
+    <p>Na frase temos uma <strong>parte do texto em negrito</strong> usando a tag STRONG (Semântica)</p>
+    <h2>Itálico / Ênfase</h2>
+    <p>Na frase temos uma <i>parte do texto em itálico</i> usando a tag I (Não semântica)</p>
+    <p>Na frase temos uma <em>parte do texto em itálico</em> usando a tag EM (Semântica)</p>
+    <h2>Texto Marcador</h2>
+    <p>Na frase temos uma <mark>parte do texto marcado</mark> usando a tag MARK (Semântica)</p>
+    <p>Na frase temos uma <mark style="background-color: rgb(26, 255, 0);">parte do texto marcado</mark> usando a tag
+        MARK (Semântica)</p>
+    <h2>Texto grande e pequeno</h2>
+    <p>Na frase temos uma <big>parte do texto em tamanho grande</big> usando a tag BIG e um <small>texto pequeno nessa
+            parte</small> usando a tag SMALL</p>
+    <h2>Texto deletado</h2>
+    <p>Na frase temos uma <del>parte do texto deletado</del> usando a tag DEL (Semântica)</p>
+    <p>Na frase temos uma <s>parte do texto deletado</s> usando a tag S (Sem semântica)</p>
+    <h2>Texto inserido</h2>
+    <p>Na frase temos uma <ins>parte do texto inserido</ins> usando a tag INS (Semântica)</p>
+    <p>Na frase temos uma <u>parte do texto sublinhado</u> usando a tag U (Não semântica)</p>
+    <h2>Texto sobreescrito</h2>
+    <p>Vamos demonstrar uma fórmula da equação do segundo grau ax<sup>2</sup> + bx + c = 0</p> usando a tag SUP
+    <h2>Texto subescrito</h2>
+    <p>Vamos demonstrar o texto subescrito usando a fórmula da água H<sub>2</sub>O</p> usando a tag SUB
+    <h2>Trecho de código fonte</h2>
+    <p>Neste exemplo vou demonstrar um trecho de código </p>
+    <p>Inserindo o comando <code>document.getElementById</code> que é um comando JavaScript</p> usando a tag PRE e logo depois a tag CODE
+    <p>Inserindo um grande código de Python:</p>
+    <pre><code>
+Python
+import random
+import math
+
+def gerar_equacao():
+    # Coeficientes aleatórios entre -10 e 10
+    # O 'a' não pode ser zero, senão vira uma equação do primeiro grau
+    a = random.choice([i for i in range(-10, 11) if i != 0])
+    b = random.randint(-10, 10)
+    c = random.randint(-10, 10)
+
+    # Formatação visual (ajustando os sinais)
+    sinal_b = "+" if b >= 0 else ""
+    sinal_c = "+" if c >= 0 else ""
+    
+    print(f"Sua equação é: {a}x² {sinal_b}{b}x {sinal_c}{c} = 0")
+
+    # Cálculo do Delta
+    delta = b**2 - 4*a*c
+    print(f"Delta (Δ) = {delta}")
+
+    if delta < 0:
+        print("A equação não possui raízes reais.")
+    else:
+        x1 = (-b + math.sqrt(delta)) / (2*a)
+        x2 = (-b - math.sqrt(delta)) / (2*a)
+        print(f"Raízes: x1 = {x1:.2f}, x2 = {x2:.2f}")
+
+# Executar a função
+gerar_equacao()</code></pre>
+    <h2>Citações (quotation) simples</h2> 
+    <p>Segundo Steve Jobs "A tecnologia move o mundo"</p>
+    <h2>Citações completas (livros)</h2>
+    <blockquote>
+        <p>O livro "O Pequeno Príncipe" é um clássico da literatura infantil, escrito por Antoine de Saint-Exupéry. Ele
+            conta a história de um jovem príncipe que viaja por diferentes planetas, encontrando personagens únicos e
+            aprendendo lições valiosas sobre a vida, amizade e amor. O livro é conhecido por sua mensagem profunda e
+            poética, cativando leitores de todas as idades ao redor do mundo.</p>
+        <cite>Antoine de Saint-Exupéry</cite>
+    </blockquote>
+    <h2>Abreviações</h2>
+    <p>Estamos estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr
+            title="Cascading Style Sheets">CSS</abbr></p>
+    <h2>Texto invertido</h2>
+    <p>Estou estudando html</p>
+    <p><bdo dir="rtl">Estou estudando html</bdo></p>
