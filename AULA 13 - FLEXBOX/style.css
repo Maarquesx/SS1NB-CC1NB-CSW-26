@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(to right, #0d0d0e, #f00404);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    color: white;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+
+[class^="container"] {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    margin-bottom: 20px;
+}
+
+
+.item2,
+.item3,
+.container1 div,
+.container4 div {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border: none;
+}
+
+
+.container1 {
+    display: flex;
+}
+
+.container1 div {
+    background-color: rgb(255, 0, 0);
+    color: #ffffff;
+    padding: 20px;
+    margin: 5px;
+}
+
+.container2 {
+    display: flex;
+}
+
+.item2 {
+    flex-grow: 1;
+    padding: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 5px;
+}
+
+.item2:nth-child(1) {
+    background-color: #ff0000;
+}
+
+.item2:nth-child(2) {
+    background-color: #1a1a1a;
+}
+
+.item2:nth-child(3) {
+    background-color: #ff0000;
+}
+
+.item2:hover {
+    border-bottom: 5px solid white;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+
+.container3 {
+    display: flex;
+}
+
+.item3 {
+    flex-grow: 1;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.item3:nth-child(1),
+.item3:nth-child(5) {
+    background-color: #ff0000;
+}
+
+.item3:nth-child(2),
+.item3:nth-child(4) {
+    background-color: #1a1a1a;
+}
+
+.item3:nth-child(3) {
+    flex-grow: 2;
+    background-color: #e60000;
+}
+
+
+.item3:active {
+    background-color: white !important;
+    color: black;
+    transform: scale(0.95);
+}
+
+
+.container4 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container4 div {
+    background-color: #ff0000;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+}
+
+.container4 div:hover {
+    background-color: #1a1a1a;
+}
